@@ -13,14 +13,12 @@ a:hover{
 .skip{
      position:absolute;
      top:-40px;
-     visibility:hidden;
+     left:0px;
 }
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
 .skip:focus{
-     position:absolute;
      top:20px;
-     visibility:visible;
 }
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
@@ -33,23 +31,19 @@ a:hover{
 .container{
      display:grid;
      grid-template-columns:1fr 5fr 1fr;
-     grid-template-rows: auto auto auto auto;
      grid-gap:15px;
      position:relative;
-     background-size:cover;
 }
 
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
-.container > *:first-of-type{
+.container > *:first-child{
      grid-column:1/-1;
      background-image: url('../images/header.jpg');
-     background-position:center;
      background-repeat:no-repeat;
      background-size:cover;
      background-attachment:fixed;
-     overflow:auto;
 }
 
 
@@ -57,27 +51,29 @@ first div in the grid  and place it in the grid. */
  four rows in the grid. */
 
       /*This will be a lot of rules.... but be strategic and combine seletors*/
-.about {
-     grid-column: 2 / span 1;
-     grid-row: 2;
+/* .about,.method,.clients,.client{
+    grid-column: 2 / span 1;
+} */
+ .about {
+    grid-column: 2 / span 1;
+    grid-row: 2;
  }
  .method {
-     grid-column: 2 / span 1;
-     grid-row: 3;
+    grid-column: 2 / span 1;
+    grid-row: 3;
  }
  .clients {
-     grid-column: 2 / span 1;
-     grid-row: 4;
+    grid-column: 2 / span 1;
+    grid-row: 4;
  }
  .contact {
-     grid-column: 2 / span 1;
+    grid-column: 2 / span 1;
      grid-row: 5;
  }
 
  .about-image, .method-image, .clients-image, .contact-image {
      grid-column: 1 / -1;
      max-height: 600px;
-     position: relative;
      overflow: hidden;
  }
 
