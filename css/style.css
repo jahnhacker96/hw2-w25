@@ -1,128 +1,99 @@
-/*Your Code Here*/
-/* PLEASE DO NOT REMOVE MY COMMENTS.  THEY HELP US HELP YOU DEBUG. */
 
-/* Step 1: Write selector/rule property to add an underline when
-links in the navigation are in the hover or focus state.*/
-a:hover{
-     text-decoration:underline;
+body{
+    font-family:Arial, Verdana;
+    background-color: #000000;
+    color:#FFFFFF;
+    margin-top:20px;
+    margin-right:20px;
+    margin-left:20px;
+}
+h1{
+    font-size:42px;
+    text-align: center;
+    padding: 15px;
+}
+h2{
+    color:#0D0D0D;
+    font-size: 30px;
 }
 
-
-
-/* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-.skip{
-     position:absolute;
-     top:-40px;
-     left:0px;
+p{
+    font-size: 24px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
+img{
+    display: block;
+    margin: auto;
+    width: 250px;
+    border: 10px dashed #FFFFFF;
 
-/* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-.skip:focus{
-     top:20px;
 }
-
-/* Step 3: Write selector/rule property to style all elements when in focus*/
-*:focus{
-     border: 2px solid;
+div{
+    min-height: 125px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 3px solid #FFFFFF;
 }
-
-
-/* Step 4: Write selector/rule property to style the container */
-.container{
-     display:grid;
-     grid-template-columns:1fr 5fr 1fr;
-     grid-gap:15px;
-     position:relative;
+.intro{
+    border-radius: 15px;
+    margin-top: 15px;
+    line-height: 2.0;
 }
-
-
-/* Step 5: Write selector/rule property to add the background image to the 
-first div in the grid  and place it in the grid. */
-.container > *:first-child{
-     grid-column:1/-1;
-     background-image: url('../images/header.jpg');
-     background-repeat:no-repeat;
-     background-size:cover;
-     background-attachment:fixed;
+div.red{
+    background-color: #FF0000;
+    text-align:right;
+    margin-left:50px;
+    border-top:0px;
+    border-right:0px;
+    border-bottom:2px solid #FFFFFF;
+    border-left: 5px solid #FFFFFF;
 }
+div.blue{
+    background-color:#0000FF;
+    color: #C4C4C4;
+    text-align:left;
+    margin-right:50px;
+    border-left:0px;
+    border-bottom:0px;
+    border-right:5px solid #FFFFFF;
+    border-top:2px solid #FFFFFF;
+}
+div.blue h2{
+    color: #C4C4C4;
+}
+div.yellow{
+    background-color:#FFFF00;
+    text-align:right;
+    margin-left:50px;
+    border-top:0px;
+    border-right: 0px;
+    border-bottom:2px solid #FFFFFF;
+    border-left:5px solid #FFFFFF;
+    color:#707070;
+}
+div.green{
+    background-color:#008500;
+    text-align:left;
+    margin-right:50px;
+    border-left:0px;
+    border-bottom:0px;
+    border-right:5px solid #FFFFFF;
+    border-top:2px solid #FFFFFF;
+}
+footer{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,255,1) 25%, rgba(0,102,255,1) 70%);
+    border: 5px solid #FFFFFF;
+}
+footer p{
+    text-align:right;
+    font-size:20px;
+    padding-left:0px;
+    padding-top:15px;
+    padding-right:15px;
+    padding-bottom:15px;
 
-
-/* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
- four rows in the grid. */
-
-      /*This will be a lot of rules.... but be strategic and combine seletors*/
-/* .about,.method,.clients,.client{
-    grid-column: 2 / span 1;
-} */
- .about {
-    grid-column: 2 / span 1;
-    grid-row: 2;
- }
- .method {
-    grid-column: 2 / span 1;
-    grid-row: 3;
- }
- .clients {
-    grid-column: 2 / span 1;
-    grid-row: 4;
- }
- .contact {
-    grid-column: 2 / span 1;
-     grid-row: 5;
- }
-
- .about-image, .method-image, .clients-image, .contact-image {
-     grid-column: 1 / -1;
-     max-height: 600px;
-     overflow: hidden;
- }
-
- .about-image {
-     grid-row: 2;
- }
- .method-image {
-     grid-row: 3;
- }
- .clients-image {
-     grid-row: 4;
- }
- .contact-image {
-     grid-row: 5;
- }
- /* Step 8: Write the selector/rule property to style the .text-block class. */
- .text-block {
-    text-align:center;
-    align-self:center;
-    justify-self:center;
- }
-
-/* Add your media query here */
- @media all and (min-width: 800px) {
-
-  /* Step 9: Write the selector/rule property to style the nav element */
-    nav {
-        padding: 30px 0px 30px 0px;
-        text-align:right;
-    }
-
-  /* Step 10: Write the selector/rule property to update the .container class */
-    .container{
-        display:grid;
-        grid-template-columns:50px auto 500px auto 50px;
-        grid-template-rows:auto;
-    }
-
-  /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
-  .about, .clients, .method-image, .contact-image {
-    grid-column: 3 / span 2;
-  }
-  .method, .contact, .about-image, .clients-image {
-    grid-column: 2 / span 2;
-  }
-
- /* Step 13:Write the selector/rule property to update the .text-block class */
-   .text-block {
-    max-height:250px;
-    overflow-y:auto;
-   }
- }
+}
